@@ -1,5 +1,56 @@
 {
     "topic": "Introducing yourself",
     "level": "A1",
-    "content": "Mikkel: Hej! Jeg hedder Mikkel. Hvad hedder du?\n\nSofie: Hej Mikkel. Jeg hedder Sofie. Hyggeligt at møde dig!\n\nMikkel: I lige måde! Hvor kommer du fra?\n\nSofie: Jeg kommer fra Aarhus. Hvad med dig?\n\nMikkel: Jeg kommer fra København, men nu bor jeg her i Aarhus.\n\nSofie: Hvor spændende! Velkommen til byen.\n\nEnglish Translation:\n\nMikkel: Hi! My name is Mikkel. What is your name?\n\nSofie: Hi Mikkel. My name is Sofie. Nice to meet you!\n\nMikkel: Likewise! Where do you come from?\n\nSofie: I come from Aarhus. What about you?\n\nMikkel: I come from Copenhagen, but now I live here in Aarhus.\n\nSofie: How exciting! Welcome to the city."
+    "dialogue": [
+        {
+            "speaker": "Mikkel",
+            "text": "Hej, jeg hedder Mikkel. Hvad hedder du?"
+        },
+        {
+            "speaker": "Sofie",
+            "text": "Hej Mikkel! Jeg hedder Sofie. Hyggeligt at møde dig."
+        },
+        {
+            "speaker": "Mikkel",
+            "text": "I lige måde. Hvor kommer du fra?"
+        },
+        {
+            "speaker": "Sofie",
+            "text": "Jeg kommer fra Aarhus, men nu bor jeg i København. Hvad med dig?"
+        },
+        {
+            "speaker": "Mikkel",
+            "text": "Jeg bor også i København, men jeg kommer fra Odense."
+        },
+        {
+            "speaker": "Sofie",
+            "text": "Hvor spændende! Velkommen."
+        }
+    ],
+    "translation": [
+        {
+            "speaker": "Mikkel",
+            "text": "Hi, my name is Mikkel. What is your name?"
+        },
+        {
+            "speaker": "Sofie",
+            "text": "Hi Mikkel! My name is Sofie. Nice to meet you."
+        },
+        {
+            "speaker": "Mikkel",
+            "text": "Likewise. Where do you come from?"
+        },
+        {
+            "speaker": "Sofie",
+            "text": "I come from Aarhus, but now I live in Copenhagen. What about you?"
+        },
+        {
+            "speaker": "Mikkel",
+            "text": "I also live in Copenhagen, but I come from Odense."
+        },
+        {
+            "speaker": "Sofie",
+            "text": "How exciting! Welcome."
+        }
+    ]
 }

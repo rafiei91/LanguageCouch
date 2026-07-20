@@ -17,7 +17,22 @@ def main():
         "lessons/lesson_001.json"
     )
 
-    print("Lesson saved successfully!")
+    print(f"Topic: {lesson.topic}")
+    print(f"Level: {lesson.level}")
+
+    print("\nDialogue")
+    print("-" * 30)
+
+    for line in lesson.dialogue:
+        print(f"{line.speaker}: {line.text}")
+
+    print("\nTranslation")
+    print("-" * 30)
+
+    for line in lesson.translation:
+        print(f"{line.speaker}: {line.text}")
+
+    print("\nLesson saved successfully!")
 
 
 if __name__ == "__main__":
