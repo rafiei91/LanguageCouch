@@ -1,0 +1,1 @@
+print("Danish Coach is ready!")
