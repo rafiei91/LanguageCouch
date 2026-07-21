@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 
 from models.character import Character
+from models.vocabulary import Vocabulary
 
 
 @dataclass
@@ -20,9 +21,7 @@ class Lesson:
     dialogue: list[DialogueLine]
     translation: list[DialogueLine]
 
-    vocabulary: list = field(default_factory=list)
-    grammar: list = field(default_factory=list)
-    quiz: list = field(default_factory=list)
+    vocabulary: list[Vocabulary] = field(default_factory=list)
 
     conversation_audio: str = ""
     learning_audio: str = ""

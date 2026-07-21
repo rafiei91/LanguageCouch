@@ -1,58 +1,38 @@
 from services.lesson_generator import LessonGenerator
-from services.lesson_storage import LessonStorage
-from services.audio_service import AudioService
+from services.vocabulary_generator import VocabularyGenerator
 from services.transcript_builder import TranscriptBuilder
+from services.audio_service import AudioService
+from services.lesson_storage import LessonStorage
+
 
 def main():
 
-    # Create services
     lesson_generator = LessonGenerator()
-    storage = LessonStorage()
-    audio = AudioService()
+    vocabulary_generator = VocabularyGenerator()
 
-    # Generate lesson
     lesson = lesson_generator.generate(
         topic="Restaurant",
         level="A1",
     )
 
-    # Generate conversation audio
-    transcript = TranscriptBuilder.conversation(lesson)
+    lesson.vocabulary = vocabulary_generator.generate(lesson)
 
-    audio.generate(
-        lesson=lesson,
-        transcript=transcript,
-        output_file="audio/lesson_001_conversation.wav",
-    )
+    transcript_builder = TranscriptBuilder()
+    audio_service = AudioService()
+    lesson_storage = LessonStorage()
 
-    lesson.conversation_audio = "audio/lesson_001_conversation.wav"
+    conversation = transcript_builder.conversation(lesson)
 
-    # Save lesson (including audio filename)
-    storage.save(
+    audio_service.generate(
         lesson,
-        "lessons/lesson_001.json"
+        conversation,
+        "conversation.wav",
     )
 
-    # Display lesson
-    print(f"Topic: {lesson.topic}")
-    print(f"Level: {lesson.level}")
-
-    print("\nDialogue")
-    print("-" * 30)
-
-    for line in lesson.dialogue:
-        print(f"{line.speaker}: {line.text}")
-
-    print("\nTranslation")
-    print("-" * 30)
-
-    for line in lesson.translation:
-        print(f"{line.speaker}: {line.text}")
-
-    print("\nConversation audio:")
-    print(lesson.conversation_audio)
-
-    print("\nLesson saved successfully!")
+    lesson_storage.save(
+        lesson,
+        "lessons/lesson.json"
+    )
 
 
 if __name__ == "__main__":

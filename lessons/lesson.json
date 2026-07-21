@@ -1,0 +1,121 @@
+{
+    "topic": "Restaurant",
+    "level": "A1",
+    "speaker1": {
+        "name": "Oliver",
+        "gender": "male",
+        "voice": "Alnilam"
+    },
+    "speaker2": {
+        "name": "William",
+        "gender": "male",
+        "voice": "Orus"
+    },
+    "dialogue": [
+        {
+            "speaker": "Oliver",
+            "text": "Hej William. Hvad vil du gerne have at spise i dag?"
+        },
+        {
+            "speaker": "William",
+            "text": "Jeg vil gerne have en stor burger med pommes frites. Hvad med dig?"
+        },
+        {
+            "speaker": "Oliver",
+            "text": "Jeg tager en pizza med ost og skinke. Jeg er meget sulten."
+        },
+        {
+            "speaker": "William",
+            "text": "Det lyder godt! Hvad vil du have at drikke?"
+        },
+        {
+            "speaker": "Oliver",
+            "text": "Bare et koldt glas vand, tak. Hvad drikker du?"
+        },
+        {
+            "speaker": "William",
+            "text": "Jeg bestiller en stor cola. Nu kalder jeg på tjeneren."
+        }
+    ],
+    "translation": [
+        {
+            "speaker": "Oliver",
+            "text": "Hi William. What would you like to eat today?"
+        },
+        {
+            "speaker": "William",
+            "text": "I would like a big burger with french fries. What about you?"
+        },
+        {
+            "speaker": "Oliver",
+            "text": "I will take a pizza with cheese and ham. I am very hungry."
+        },
+        {
+            "speaker": "William",
+            "text": "That sounds good! What do you want to drink?"
+        },
+        {
+            "speaker": "Oliver",
+            "text": "Just a cold glass of water, please. What are you drinking?"
+        },
+        {
+            "speaker": "William",
+            "text": "I am ordering a big cola. Now I will call the waiter."
+        }
+    ],
+    "vocabulary": [
+        {
+            "danish": "gerne have",
+            "english": "would like",
+            "example": "Jeg vil gerne have en stor burger med pommes frites."
+        },
+        {
+            "danish": "at spise",
+            "english": "to eat",
+            "example": "Hvad vil du gerne have at spise i dag?"
+        },
+        {
+            "danish": "at drikke",
+            "english": "to drink",
+            "example": "Hvad vil du have at drikke?"
+        },
+        {
+            "danish": "sulten",
+            "english": "hungry",
+            "example": "Jeg er meget sulten."
+        },
+        {
+            "danish": "tak",
+            "english": "please / thank you",
+            "example": "Bare et koldt glas vand, tak."
+        },
+        {
+            "danish": "vand",
+            "english": "water",
+            "example": "Bare et koldt glas vand, tak."
+        },
+        {
+            "danish": "Hvad med dig?",
+            "english": "What about you?",
+            "example": "Hvad med dig?"
+        },
+        {
+            "danish": "Det lyder godt",
+            "english": "That sounds good",
+            "example": "Det lyder godt!"
+        },
+        {
+            "danish": "i dag",
+            "english": "today",
+            "example": "Hvad vil du gerne have at spise i dag?"
+        },
+        {
+            "danish": "bestiller",
+            "english": "order / am ordering",
+            "example": "Jeg bestiller en stor cola."
+        }
+    ],
+    "conversation_audio": "conversation.wav",
+    "learning_audio": "",
+    "shadowing_audio": ""
+}

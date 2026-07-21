@@ -1,15 +1,12 @@
-import wave
-
 from google import genai
 from google.genai import types
 
 from config import (
     GEMINI_API_KEY,
     TTS_MODEL,
-    SAMPLE_RATE,
-    CHANNELS,
-    SAMPLE_WIDTH,
 )
+
+from services.audio_composer import AudioComposer
 
 
 class AudioService:
@@ -32,15 +29,14 @@ class AudioService:
             lesson.speaker2,
         )
 
-        audio = self._generate_audio(
+        pcm = self._generate_audio(
             transcript,
             speaker_configs,
         )
 
-        self._save_wav(
-            audio,
-            output_file,
-        )
+        composer = AudioComposer()
+        composer.add_audio(pcm)
+        composer.save(output_file)
 
         lesson.conversation_audio = output_file
 
@@ -93,17 +89,3 @@ class AudioService:
         )
 
         return response.candidates[0].content.parts[0].inline_data.data
-
-    # ----------------------------------------------------------
-
-    def _save_wav(
-        self,
-        audio,
-        output_file,
-    ):
-
-        with wave.open(output_file, "wb") as wf:
-            wf.setnchannels(CHANNELS)
-            wf.setsampwidth(SAMPLE_WIDTH)
-            wf.setframerate(SAMPLE_RATE)
-            wf.writeframes(audio)
