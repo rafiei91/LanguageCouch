@@ -1,56 +1,72 @@
 {
     "topic": "Introducing yourself",
     "level": "A1",
+    "speaker1": {
+        "name": "Emma",
+        "gender": "female",
+        "voice": "Aoede"
+    },
+    "speaker2": {
+        "name": "Clara",
+        "gender": "female",
+        "voice": "Despina"
+    },
     "dialogue": [
         {
-            "speaker": "Mikkel",
-            "text": "Hej, jeg hedder Mikkel. Hvad hedder du?"
+            "speaker": "Emma",
+            "text": "Hej! Jeg hedder Emma. Hvad hedder du?"
         },
         {
-            "speaker": "Sofie",
-            "text": "Hej Mikkel! Jeg hedder Sofie. Hyggeligt at møde dig."
+            "speaker": "Clara",
+            "text": "Hej Emma. Jeg hedder Clara. Dejligt at møde dig!"
         },
         {
-            "speaker": "Mikkel",
-            "text": "I lige måde. Hvor kommer du fra?"
+            "speaker": "Emma",
+            "text": "I lige måde! Hvor kommer du fra?"
         },
         {
-            "speaker": "Sofie",
-            "text": "Jeg kommer fra Aarhus, men nu bor jeg i København. Hvad med dig?"
+            "speaker": "Clara",
+            "text": "Jeg kommer fra Tyskland, men jeg bor i Aarhus nu. Hvad med dig?"
         },
         {
-            "speaker": "Mikkel",
-            "text": "Jeg bor også i København, men jeg kommer fra Odense."
+            "speaker": "Emma",
+            "text": "Jeg er fra Odense, og jeg studerer her i byen."
         },
         {
-            "speaker": "Sofie",
-            "text": "Hvor spændende! Velkommen."
+            "speaker": "Clara",
+            "text": "Hvor spændende! Vi ses i klassen."
         }
     ],
     "translation": [
         {
-            "speaker": "Mikkel",
-            "text": "Hi, my name is Mikkel. What is your name?"
+            "speaker": "Emma",
+            "text": "Hi! My name is Emma. What is your name?"
         },
         {
-            "speaker": "Sofie",
-            "text": "Hi Mikkel! My name is Sofie. Nice to meet you."
+            "speaker": "Clara",
+            "text": "Hi Emma. My name is Clara. Nice to meet you!"
         },
         {
-            "speaker": "Mikkel",
-            "text": "Likewise. Where do you come from?"
+            "speaker": "Emma",
+            "text": "Likewise! Where do you come from?"
         },
         {
-            "speaker": "Sofie",
-            "text": "I come from Aarhus, but now I live in Copenhagen. What about you?"
+            "speaker": "Clara",
+            "text": "I come from Germany, but I live in Aarhus now. What about you?"
         },
         {
-            "speaker": "Mikkel",
-            "text": "I also live in Copenhagen, but I come from Odense."
+            "speaker": "Emma",
+            "text": "I am from Odense, and I study here in the city."
         },
         {
-            "speaker": "Sofie",
-            "text": "How exciting! Welcome."
+            "speaker": "Clara",
+            "text": "How exciting! See you in class."
         }
-    ]
+    ],
+    "vocabulary": [],
+    "grammar": [],
+    "quiz": [],
+    "conversation_audio": "audio/lesson_001_conversation.wav",
+    "learning_audio": "",
+    "shadowing_audio": ""
 }

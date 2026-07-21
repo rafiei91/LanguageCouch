@@ -1,11 +1,51 @@
 import os
 from dotenv import load_dotenv
 
-# Load variables from the .env file
+# ==========================================================
+# Environment
+# ==========================================================
+
 load_dotenv()
 
-# Read the Gemini API key
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 if GEMINI_API_KEY is None:
     raise ValueError("GEMINI_API_KEY not found in .env")
+
+
+# ==========================================================
+# Gemini Models
+# ==========================================================
+
+TEXT_MODEL = "gemini-3.5-flash"
+
+TTS_MODEL = "gemini-3.1-flash-tts-preview"
+
+
+# ==========================================================
+# Voices
+# ==========================================================
+
+VOICE_MIKKEL = "Kore"
+
+VOICE_SOFIE = "Puck"
+
+
+# ==========================================================
+# Audio
+# ==========================================================
+
+SAMPLE_RATE = 24000
+
+CHANNELS = 1
+
+SAMPLE_WIDTH = 2
+
+
+# ==========================================================
+# Folders
+# ==========================================================
+
+LESSONS_FOLDER = "lessons"
+
+AUDIO_FOLDER = "audio"
