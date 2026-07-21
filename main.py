@@ -1,4 +1,4 @@
-from services.gemini_service import GeminiService
+from services.lesson_generator import LessonGenerator
 from services.lesson_storage import LessonStorage
 from services.audio_service import AudioService
 from services.transcript_builder import TranscriptBuilder
@@ -6,14 +6,14 @@ from services.transcript_builder import TranscriptBuilder
 def main():
 
     # Create services
-    gemini = GeminiService()
+    lesson_generator = LessonGenerator()
     storage = LessonStorage()
     audio = AudioService()
 
     # Generate lesson
-    lesson = gemini.generate_lesson(
-        topic="Introducing yourself",
-        level="A1"
+    lesson = lesson_generator.generate(
+        topic="Restaurant",
+        level="A1",
     )
 
     # Generate conversation audio

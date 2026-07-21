@@ -1,66 +1,66 @@
 {
-    "topic": "Introducing yourself",
+    "topic": "Restaurant",
     "level": "A1",
     "speaker1": {
-        "name": "Emma",
+        "name": "Freja",
         "gender": "female",
-        "voice": "Aoede"
+        "voice": "Autonoe"
     },
     "speaker2": {
-        "name": "Clara",
-        "gender": "female",
-        "voice": "Despina"
+        "name": "Jonas",
+        "gender": "male",
+        "voice": "Algieba"
     },
     "dialogue": [
         {
-            "speaker": "Emma",
-            "text": "Hej! Jeg hedder Emma. Hvad hedder du?"
+            "speaker": "Freja",
+            "text": "Hej Jonas, hvad skal vi spise i dag?"
         },
         {
-            "speaker": "Clara",
-            "text": "Hej Emma. Jeg hedder Clara. Dejligt at møde dig!"
+            "speaker": "Jonas",
+            "text": "Jeg vil gerne have en stor pizza med skinke. Og dig?"
         },
         {
-            "speaker": "Emma",
-            "text": "I lige måde! Hvor kommer du fra?"
+            "speaker": "Freja",
+            "text": "Jeg tager en lækker salat og et glas vand."
         },
         {
-            "speaker": "Clara",
-            "text": "Jeg kommer fra Tyskland, men jeg bor i Aarhus nu. Hvad med dig?"
+            "speaker": "Jonas",
+            "text": "Det lyder godt. Skal vi også have kaffe bagefter?"
         },
         {
-            "speaker": "Emma",
-            "text": "Jeg er fra Odense, og jeg studerer her i byen."
+            "speaker": "Freja",
+            "text": "Ja tak, og måske et stykke kage!"
         },
         {
-            "speaker": "Clara",
-            "text": "Hvor spændende! Vi ses i klassen."
+            "speaker": "Jonas",
+            "text": "Perfekt, jeg kalder på tjeneren nu."
         }
     ],
     "translation": [
         {
-            "speaker": "Emma",
-            "text": "Hi! My name is Emma. What is your name?"
+            "speaker": "Freja",
+            "text": "Hi Jonas, what are we eating today?"
         },
         {
-            "speaker": "Clara",
-            "text": "Hi Emma. My name is Clara. Nice to meet you!"
+            "speaker": "Jonas",
+            "text": "I would like a large pizza with ham. And you?"
         },
         {
-            "speaker": "Emma",
-            "text": "Likewise! Where do you come from?"
+            "speaker": "Freja",
+            "text": "I will have a delicious salad and a glass of water."
         },
         {
-            "speaker": "Clara",
-            "text": "I come from Germany, but I live in Aarhus now. What about you?"
+            "speaker": "Jonas",
+            "text": "That sounds good. Shall we also have coffee afterwards?"
         },
         {
-            "speaker": "Emma",
-            "text": "I am from Odense, and I study here in the city."
+            "speaker": "Freja",
+            "text": "Yes please, and maybe a piece of cake!"
         },
         {
-            "speaker": "Clara",
-            "text": "How exciting! See you in class."
+            "speaker": "Jonas",
+            "text": "Perfect, I will call the waiter now."
         }
     ],
     "vocabulary": [],
