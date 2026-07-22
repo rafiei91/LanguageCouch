@@ -30,3 +30,4 @@ wheel==0.47.0
 fastapi
 uvicorn[standard]
 python-multipart
+pydantic-settings>=2.0.0
