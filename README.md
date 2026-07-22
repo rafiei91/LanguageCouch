@@ -1,6 +1,6 @@
 # DanishCouch
 
-DanishCouch is an AI-powered language learning application that generates complete Danish lessons using Google's Gemini models.
+LanguageCouch is an AI-powered language learning application that generates complete Language lessons using Google's Gemini models.
 
 ## Features
 
