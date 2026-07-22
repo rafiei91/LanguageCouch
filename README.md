@@ -6,7 +6,7 @@ LanguageCouch is an AI-powered language learning application that generates comp
 
 - AI-generated dialogues
 - Vocabulary extraction
-- Multi-speaker Danish audio
+- Multi-speaker audio
 - Conversation mode
 - Shadowing mode
 - Learning mode
@@ -24,8 +24,8 @@ LanguageCouch is an AI-powered language learning application that generates comp
 ## Installation
 
 ```bash
-git clone https://github.com/<your-user>/DanishCouch.git
-cd DanishCouch
+git clone https://github.com/<your-user>/LanguageCouch.git
+cd LanguageCouch
 
 conda create -n danishcoach python=3.11
 conda activate danishcoach
