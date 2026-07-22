@@ -1,4 +1,5 @@
 import wave
+import os
 
 from config import (
     SAMPLE_RATE,
@@ -34,6 +35,11 @@ class AudioComposer:
     # ----------------------------------------------------------
 
     def save(self, filename: str):
+
+        os.makedirs(
+            os.path.dirname(filename),
+            exist_ok=True,
+        )
 
         with wave.open(filename, "wb") as wf:
             wf.setnchannels(CHANNELS)

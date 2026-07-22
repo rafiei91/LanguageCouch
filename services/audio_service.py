@@ -14,15 +14,14 @@ class AudioService:
     def __init__(self):
         self.client = genai.Client(api_key=GEMINI_API_KEY)
 
+    # ----------------------------------------------------------
+
     def generate(
         self,
         lesson,
         transcript: str,
         output_file: str,
     ):
-        """
-        Generate a two-speaker conversation audio from a Lesson.
-        """
 
         speaker_configs = self._build_voice_config(
             lesson.speaker1,
@@ -37,8 +36,40 @@ class AudioService:
         composer = AudioComposer()
         composer.add_audio(pcm)
         composer.save(output_file)
+        
+    # ----------------------------------------------------------
 
-        lesson.conversation_audio = output_file
+    def generate_line(
+        self,
+        lesson,
+        speaker_name: str,
+        voice_name: str,
+        text: str,
+    ) -> bytes:
+
+        speaker_configs = self._build_voice_config(
+            lesson.speaker1,
+            lesson.speaker2,
+        )
+
+        # Replace the voice of speaker1 with the requested voice.
+        # The second speaker is only present because Gemini requires
+        # exactly two configured speakers.
+        speaker_configs[0] = types.SpeakerVoiceConfig(
+            speaker=speaker_name,
+            voice_config=types.VoiceConfig(
+                prebuilt_voice_config=types.PrebuiltVoiceConfig(
+                    voice_name=voice_name
+                )
+            ),
+        )
+
+        transcript = f"{speaker_name}: {text}"
+
+        return self._generate_audio(
+            transcript,
+            speaker_configs,
+        )
 
     # ----------------------------------------------------------
 
@@ -71,9 +102,9 @@ class AudioService:
 
     def _generate_audio(
         self,
-        transcript,
+        transcript: str,
         speaker_configs,
-    ):
+    ) -> bytes:
 
         response = self.client.models.generate_content(
             model=TTS_MODEL,

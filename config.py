@@ -30,6 +30,11 @@ VOICE_MIKKEL = "Kore"
 
 VOICE_SOFIE = "Puck"
 
+# Learning mode narrator
+
+LEARNING_SPEAKER_NAME = "Teacher"
+
+LEARNING_VOICE_NAME = "Kore"
 
 # ==========================================================
 # Audio
