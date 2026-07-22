@@ -1,20 +1,27 @@
-from app.ai.mock_gemini_service import MockGeminiService
-from app.schemas.generated_lesson import GeneratedLesson
-from app.schemas.lesson import LessonSummary
+from app.ai.real_gemini_service import RealGeminiService
+from app.schemas.lesson import Lesson
+from app.services.audio_service import AudioService
+from app.services.lesson_storage import LessonStorage
 
 
 class LessonService:
     def __init__(self):
-        self.gemini = MockGeminiService()
+        self.gemini = RealGeminiService()
+        self.storage = LessonStorage()
+        self.audio = AudioService()
 
-    def list_lessons(self) -> list[LessonSummary]:
-        return [
-            LessonSummary(
-                id=1,
-                topic="Introducing yourself",
-                level="A1",
-            )
-        ]
+    def list_lessons(self) -> list[Lesson]:
+        return self.storage.list()
 
-    def generate_lesson(self, topic: str, level: str) -> GeneratedLesson:
-        return self.gemini.generate_lesson(topic, level)
+    def get_lesson(self, lesson_id: str) -> Lesson:
+        return self.storage.get(lesson_id)
+
+    def generate_lesson(self, topic: str, level: str) -> Lesson:
+        lesson = self.gemini.generate_lesson(topic, level)
+
+        self.storage.save(lesson)
+
+        lesson_dir = self.storage.base_dir / lesson.id
+        lesson = self.audio.generate(lesson, lesson_dir)
+
+        return lesson

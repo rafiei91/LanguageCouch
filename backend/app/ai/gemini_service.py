@@ -1,11 +1,11 @@
 from abc import ABC, abstractmethod
 
-from app.schemas.generated_lesson import GeneratedLesson
+from app.schemas.lesson import Lesson
 
 
 class BaseGeminiService(ABC):
     @abstractmethod
-    def generate_lesson(self, topic: str, level: str) -> GeneratedLesson:
+    def generate_lesson(self, topic: str, level: str) -> Lesson:
         """Generate a language lesson."""
         pass
     
