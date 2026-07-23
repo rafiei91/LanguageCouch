@@ -8,7 +8,9 @@ from app.schemas.lesson import Lesson, DialogueLine
 from app.schemas.lesson_response import LessonResponse
 from app.services.character_service import CharacterService
 
+
 class RealGeminiService(BaseGeminiService):
+
     def __init__(self):
         self.client = genai.Client(api_key=settings.gemini_api_key)
         self.character_service = CharacterService()
@@ -51,17 +53,24 @@ class RealGeminiService(BaseGeminiService):
             response_schema=LessonResponse,
         )
 
+        dialogue = []
+
+        for danish, english in zip(
+            lesson_data.dialogue,
+            lesson_data.translation,
+        ):
+            dialogue.append(
+                DialogueLine(
+                    speaker=danish.speaker,
+                    danish=danish.text,
+                    english=english.text,
+                )
+            )
+
         return Lesson(
             topic=topic,
             level=level,
             speaker1=speaker1,
             speaker2=speaker2,
-            dialogue=[
-                DialogueLine(**line.model_dump())
-                for line in lesson_data.dialogue
-            ],
-            translation=[
-                DialogueLine(**line.model_dump())
-                for line in lesson_data.translation
-            ],
+            dialogue=dialogue,
         )

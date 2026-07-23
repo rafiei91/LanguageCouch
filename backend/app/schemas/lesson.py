@@ -7,7 +7,9 @@ from app.schemas.vocabulary import Vocabulary
 
 class DialogueLine(BaseModel):
     speaker: str
-    text: str
+    danish: str
+    english: str
+
 
 class Lesson(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid4()))
@@ -19,10 +21,9 @@ class Lesson(BaseModel):
     speaker2: Character
 
     dialogue: list[DialogueLine]
-    translation: list[DialogueLine]
 
     vocabulary: list[Vocabulary] = Field(default_factory=list)
 
-    conversation_audio: str = ""
-    learning_audio: str = ""
-    shadowing_audio: str = ""
+    conversation_audio: str | None = None
+    learning_audio: str | None = None
+    shadowing_audio: str | None = None

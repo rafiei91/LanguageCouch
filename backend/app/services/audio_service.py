@@ -42,16 +42,16 @@ class AudioService:
             shadowing_audio,
         )
 
-        lesson.conversation_audio = str(
-            conversation_audio.relative_to(lesson_dir)
+        lesson.conversation_audio = (
+            f"/media/{lesson.id}/audio/conversation.wav"
         )
 
-        lesson.learning_audio = str(
-            learning_audio.relative_to(lesson_dir)
+        lesson.learning_audio = (
+            f"/media/{lesson.id}/audio/learning.wav"
         )
 
-        lesson.shadowing_audio = str(
-            shadowing_audio.relative_to(lesson_dir)
+        lesson.shadowing_audio = (
+            f"/media/{lesson.id}/audio/shadowing.wav"
         )
 
         return lesson

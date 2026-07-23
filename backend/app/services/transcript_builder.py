@@ -13,7 +13,7 @@ class TranscriptBuilder:
 
         for line in lesson.dialogue:
             transcript.append(
-                f"{line.speaker}: {line.text}"
+                f"{line.speaker}: {line.danish}"
             )
 
         return "\n".join(transcript)
@@ -23,7 +23,7 @@ class TranscriptBuilder:
     @staticmethod
     def build_shadowing(
         lesson: Lesson,
-        pause: int = 3,
+        pause: int = 5,
     ) -> str:
 
         transcript = []
@@ -31,7 +31,7 @@ class TranscriptBuilder:
         for line in lesson.dialogue:
 
             transcript.append(
-                f"{line.speaker}: {line.text}"
+                f"{line.speaker}: {line.danish}"
             )
 
             transcript.append(
@@ -51,13 +51,10 @@ class TranscriptBuilder:
 
         transcript = []
 
-        for dialogue, translation in zip(
-            lesson.dialogue,
-            lesson.translation,
-        ):
+        for line in lesson.dialogue:
 
             transcript.append(
-                f"{dialogue.speaker}: {dialogue.text} {PauseBuilder.build(short_pause)} {translation.text} {PauseBuilder.build(short_pause)} {dialogue.text} {PauseBuilder.build(long_pause)}"
+                f"{line.speaker}: {line.danish} {PauseBuilder.build(short_pause)} {line.english} {PauseBuilder.build(short_pause)} {line.danish} {PauseBuilder.build(long_pause)}"
             )
 
         return "\n\n".join(transcript)

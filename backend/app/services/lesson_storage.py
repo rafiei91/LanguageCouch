@@ -5,7 +5,7 @@ from app.schemas.lesson import Lesson
 
 class LessonStorage:
     def __init__(self):
-        self.base_dir = Path("backend/data/lessons")
+        self.base_dir = Path("data/lessons")
 
     def save(self, lesson: Lesson) -> None:
         lesson_dir = self.base_dir / lesson.id

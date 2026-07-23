@@ -19,9 +19,14 @@ class LessonService:
     def generate_lesson(self, topic: str, level: str) -> Lesson:
         lesson = self.gemini.generate_lesson(topic, level)
 
-        self.storage.save(lesson)
-
         lesson_dir = self.storage.base_dir / lesson.id
-        lesson = self.audio.generate(lesson, lesson_dir)
+        lesson_dir.mkdir(parents=True, exist_ok=True)
+
+        lesson = self.audio.generate(
+            lesson,
+            lesson_dir,
+        )
+
+        self.storage.save(lesson)
 
         return lesson
