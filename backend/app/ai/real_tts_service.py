@@ -31,6 +31,8 @@ class RealTtsService:
             transcript,
             speaker_configs,
         )
+        print(transcript)
+        print("\n==============================")
 
         composer = AudioComposer()
         composer.add_audio(pcm)

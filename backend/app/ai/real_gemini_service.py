@@ -7,8 +7,6 @@ from app.prompts.lesson_prompt import LessonPrompt
 from app.schemas.lesson import Lesson, DialogueLine
 from app.schemas.lesson_response import LessonResponse
 from app.services.character_service import CharacterService
-import google.genai
-print(google.genai.__version__)
 
 class RealGeminiService(BaseGeminiService):
     def __init__(self):

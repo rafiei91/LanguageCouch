@@ -57,27 +57,7 @@ class TranscriptBuilder:
         ):
 
             transcript.append(
-                f"{dialogue.speaker}: {dialogue.text}"
-            )
-
-            transcript.append(
-                PauseBuilder.build(short_pause)
-            )
-
-            transcript.append(
-                translation.text
-            )
-
-            transcript.append(
-                PauseBuilder.build(short_pause)
-            )
-
-            transcript.append(
-                f"{dialogue.speaker}: {dialogue.text}"
-            )
-
-            transcript.append(
-                PauseBuilder.build(long_pause)
+                f"{dialogue.speaker}: {dialogue.text} {PauseBuilder.build(short_pause)} {translation.text} {PauseBuilder.build(short_pause)} {dialogue.text} {PauseBuilder.build(long_pause)}"
             )
 
         return "\n\n".join(transcript)

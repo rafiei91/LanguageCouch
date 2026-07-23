@@ -10,12 +10,12 @@ class PauseBuilder:
                 (1 seconds pause)
 
             2 ->
-                (1 seconds pause)
+                (1 seconds pause)l
                 (1 seconds pause)
 
             3 ->
-                (1 seconds pause)
-                (1 seconds pause)
+                (1 seconds pause)l
+                (1 seconds pause)l
                 (1 seconds pause)
         """
 
@@ -25,8 +25,8 @@ class PauseBuilder:
         pauses = []
 
         for _ in range(seconds - 1):
-            pauses.append("(1 seconds pause)")
+            pauses.append("(1 seconds pause)l")
 
         pauses.append("(1 seconds pause)")
 
-        return "\n".join(pauses)
+        return "".join(pauses)
